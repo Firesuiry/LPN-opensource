@@ -1,0 +1,13 @@
+*.pyc
+.idea/
+__pycache__/
+*.png
+*.txt
+evaluate/task_result
+*.json
+*.log
+rl/DDPG/logs
+rl/train30/logs
+*.h5
+*.v2
+*.gif
