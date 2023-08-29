@@ -77,9 +77,10 @@ def plot(max_r=20, dim=20, prob_1=0.5):
     # plt.show()
     # figure, axes = plt.subplots()  # 得到画板、轴
     plt.boxplot(data.values(), patch_artist=True, labels=list(range(max_r)))  # 描点上色
+    # set dpi to 200
     plt.xlabel('Hamming distance from the correct secret')
     plt.ylabel('evaluation')
-    plt.savefig(f"data/img/{t.replace(' ', '')}.png")
+    plt.savefig(f"data/img/{t.replace(' ', '')}.png", dpi=200)
     # plt.show()  # 展示
 
 
@@ -99,7 +100,7 @@ def calculate_near_res(config):
     return {'xs': xs, 'res': res}
 
 
-def test_change_x():
+def t0est_change_x():
     dim = 20
     f = Func(dim, prob_1=0.5, row=int(1e6), error_rate=0.3)
     biga, bigb, bigbf = f.get_some_sample(0.8, 1.1)
@@ -157,7 +158,7 @@ def main():
     # pool.map(plot_with_task, tasks)
     # pool.close()
     # pool.join()
-    # plot(prob_1=0.5, max_r=15, dim=15)
+    # plot(prob_1=0.5, max_r=20, dim=20)
     plot(prob_1=0.15, max_r=20, dim=20)
     # test_change_x()
 
