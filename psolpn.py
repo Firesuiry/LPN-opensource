@@ -153,7 +153,7 @@ if __name__ == '__main__':
     logger.info('start run')
     data = {}
     pool = mp.Pool(processes=2)
-    for dim in range(35, 36, 1):
+    for dim in range(10, 12, 1):
         success = 0
         all_run = 3
         ress = pool.map(main, [dim] * all_run)

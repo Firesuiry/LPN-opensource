@@ -12,6 +12,7 @@ class Func:
 
     def __init__(self, dim, error_rate=ERROR_RATE, fixed_seed=False, prob_1=0.5, row=-1):
         self.dim = dim
+        self.error_rate = error_rate
         if row > 0:
             self.row = row
         else:
